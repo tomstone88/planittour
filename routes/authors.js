@@ -1,19 +1,19 @@
 const express = require('express')
 const router = express.Router()
 
-//All performers route
+//All authors route
 router.get('/', (req, res) => {
-    res.render('performers/index')
+    res.render('authors/index')
 })
 
-//New performer route
+//New author route
 router.get('/new', (req, res) => {
-    res.render('performers/new')
+    res.render('authors/new')
 })
 
-//Create performer route
+//Create author route
 router.post('/', (req, res) => {
-    res.send('Create performer')
+    res.send('Create author')
 })
 
 
