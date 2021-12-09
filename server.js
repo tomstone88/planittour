@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV != 'production') {
     require('dotenv').config();
 }
 const express = require('express');
@@ -15,7 +15,7 @@ app.use(expressLayouts);
 app.use(express.static('public'))
 app.use('/', indexRouter);
 app.use('/authors', authorRouter);
-app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
+app.use(express.urlencoded({ limit: '10mb', extended: false }));
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
