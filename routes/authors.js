@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Author = require('../models/author')
 
+
 //All authors route
 router.get('/', (req, res) => {
     res.render('authors/index')
